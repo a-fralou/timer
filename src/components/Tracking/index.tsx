@@ -51,7 +51,7 @@ export const Tracking: React.FC = () => {
         <button onClick={handleRemoveTimer}>Remove</button>
       </div>
       <div className='row'>
-        {timers.map((timer, i) => (
+        {timers.map((timer) => (
           <div key={timer.id} className='col'>
             <Timer timer={timer} onReset={() => handleResetTimer(timer.id)} />
           </div>
