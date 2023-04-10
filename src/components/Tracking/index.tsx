@@ -24,7 +24,7 @@ export const Tracking: React.FC = () => {
   const handleAddTimer = () => {
     setTimers((prev) => [
       ...prev,
-      { id: new Date().getTime(), time: 0, isRunning: false }
+      { id: Date.now(), time: 0, isRunning: false }
     ])
   }
 

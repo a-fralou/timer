@@ -1,12 +1,12 @@
 export const tickTimer = (fn: Function, delay: number) => {
-  const start = new Date().getTime()
+  const start = Date.now()
   let timeoutId: ReturnType<typeof setTimeout>
   let time = 0
 
   const loop = () => {
     time += 100
 
-    const diff = new Date().getTime() - start - time
+    const diff = Date.now() - start - time
 
     timeoutId = setTimeout(() => {
       fn()
