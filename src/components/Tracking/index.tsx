@@ -52,12 +52,8 @@ export const Tracking: React.FC = () => {
       </div>
       <div className='row'>
         {timers.map((timer, i) => (
-          <div className='col'>
-            <Timer
-              key={i}
-              timer={timer}
-              onReset={() => handleResetTimer(timer.id)}
-            />
+          <div key={timer.id} className='col'>
+            <Timer timer={timer} onReset={() => handleResetTimer(timer.id)} />
           </div>
         ))}
       </div>
